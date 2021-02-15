@@ -1,0 +1,33 @@
+# Tide Tuesday Project
+# Wealth and income over time
+
+# Created by Davidson Santana
+# Created on 02/14/2021
+
+
+# install packages
+if (!require(tidytuesdayR)) {
+  install.packages("tidytuesdayR")
+}
+
+library(tidyverse)
+
+tuesdata <- tidytuesdayR::tt_load('2021-02-09')
+View(tuesdata)
+
+retirement <- tuesdata$retirement
+
+ggplot(data = retirement, mapping = aes(x = year, 
+                                        y = retirement, color = race)) +
+  geom_point() +
+  geom_smooth() +
+  scale_x_continuous(breaks = seq(1989, 2016, 3)) +
+  scale_y_continuous(breaks = seq(0, 175000, 25000)) +
+  labs(
+    x = '',
+    y = 'Retirement (2016 Dollars)',
+    title = 'Wealth and income over time', 
+    subtitle = 'Average family liquid retirement savings normalized to 2016 dollars.',
+    caption = 'Data: Urban Institue. Created by: Davidson Santana'
+    )
+  
