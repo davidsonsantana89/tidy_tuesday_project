@@ -28,6 +28,6 @@ ggplot(data = retirement, mapping = aes(x = year,
     y = 'Retirement (2016 Dollars)',
     title = 'Wealth and income over time', 
     subtitle = 'Average family liquid retirement savings normalized to 2016 dollars.',
-    caption = 'Data: Urban Institue. Created by: Davidson Santana'
+    caption = 'Data: Urban Institute. Created by: Davidson Santana'
     )
   
