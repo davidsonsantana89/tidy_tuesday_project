@@ -28,7 +28,7 @@ ggplot(data = dado_2, aes(x = Percentage, y = Class,fill = Expenditures),
   geom_col() +
   geom_text(aes(label = Percentage), 
             position = position_stack(vjust = 0.7)) +
-  labs(x = "",
+  labs(x = "Percentage",
        y = "Income Class in Dollars",
        title = "Dubois Challenge",
        subtitle = "challenge05: Income and Expenditure of 150 Negro Families in Atlanta, GA, USA",
